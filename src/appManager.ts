@@ -58,7 +58,7 @@ export class AppManager {
     } else if (currentPath === "") {
       this.changePage("home");
     } else {
-      this.changePage("not-found");
+      this.changePage("home");
     }
   };
 
@@ -76,7 +76,7 @@ export class AppManager {
   private navigate(label: PageLabel) {
     let page = pagesItems.find((i) => i.label === label);
     if (!page) {
-      page = pagesItems.find((i) => i.label === "not-found");
+      page = pagesItems.find((i) => i.label === "home");
     }
     this.currentPage = page;
 
