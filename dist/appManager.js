@@ -45,12 +45,9 @@ export class AppManager {
         }
     };
     changePage(label) {
-        if (label === "test/") {
-            label = "home";
-        }
         let page = pagesItems.find((i) => i.label === label);
         if (!page) {
-            page = pagesItems.find((i) => i.label === "not-found");
+            page = pagesItems.find((i) => i.label === "home");
         }
         this.currentPage = page;
         history.pushState({}, "", `/${this.currentPage?.label}`);
