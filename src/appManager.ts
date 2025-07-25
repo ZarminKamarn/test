@@ -62,7 +62,10 @@ export class AppManager {
     }
   };
 
-  public changePage(label: PageLabel) {
+  public changePage(label: string) {
+    if(label === "test"){
+      label = "home";
+    }
     let page = pagesItems.find((i) => i.label === label);
     if (!page) {
       page = pagesItems.find((i) => i.label === "not-found");
